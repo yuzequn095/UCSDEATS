@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"
+                    android:viewportWidth="100.0"
+                    android:viewportHeight="24.0">
+                    <solid android:color="#ffffff"/>
+                    <corners android:radius="5dp" />
+                    <padding
+                        android:top="2dp"
+                        android:bottom="2dp"
+                        android:left="5dp"
+                        android:right="8dp" />
+                    <stroke android:width="2dp" android:color="#000000" />
+                </shape>
+            </item>
+
+            <item
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="start"
+                android:drawable="@drawable/ic_search_black_24dp" />
+        </layer-list>
+    </item>
+</selector>

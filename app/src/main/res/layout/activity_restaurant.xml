@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pc_inside"
+    tools:context="com.o1.ucsdeats.RestaurantActivity">
+
+    <RelativeLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<FrameLayout
+        android:id="@+id/restaurant_images_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/restaurant_name">-->
+
+    <!--<HorizontalScrollView
+        android:id="@+id/restaurant_images_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/textbox_shape"
+        android:scrollbars="none"
+        android:layout_marginRight="@dimen/fab_margin_small"
+        android:layout_marginLeft="@dimen/fab_margin_small" >
+        <LinearLayout
+            android:id="@+id/restaurant_images_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>-->
+    <!--</FrameLayout>-->
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="179dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="RESTAURANT NAME"
+        android:textAllCaps="false"
+        android:textColor="@color/ucsd_eat_text"
+        android:textSize="@dimen/restaurant_name_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/star_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/restaurant_name"
+        android:layout_marginBottom="@dimen/fab_margin_small"
+        android:layout_marginEnd="@dimen/fab_margin_small"
+        android:layout_marginStart="@dimen/fab_margin_small"
+        android:layout_marginTop="@dimen/fab_margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_name">
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.05"
+            android:layout_marginBottom="@dimen/fab_margin_minimal"
+            android:layout_marginEnd="@dimen/fab_margin_minimal"
+            android:layout_marginStart="@dimen/fab_margin_minimal"
+            android:layout_marginTop="@dimen/fab_margin_minimal"
+            style="?android:attr/ratingBarStyleIndicator" />
+
+        <TextView
+            android:id="@+id/star_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin_small"
+            android:text="0.00"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/star_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constrainedHeight="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/restaurant_images_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/trans">
+
+                <ImageButton
+                    android:id="@+id/restaurant_images_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:backgroundTint="@color/trans"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/restaurant_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/hours_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fab_margin_small"
+                    android:layout_marginEnd="@dimen/fab_margin_small"
+                    android:layout_marginStart="@dimen/fab_margin_small"
+                    android:layout_marginTop="@dimen/fab_margin_small"
+                    android:text="@string/restaurant_hours_prompt"
+                    android:textColor="@color/Ucsd_eat"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hours_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fab_margin_small"
+                    android:layout_marginEnd="@dimen/fab_margin_small"
+                    android:layout_marginStart="@dimen/fab_margin_small"
+                    android:layout_marginTop="@dimen/fab_margin_small"
+                    android:layout_toRightOf="@id/hours_prompt"
+                    android:text="TextView"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/location_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hours_prompt"
+                    android:layout_marginBottom="@dimen/fab_margin_small"
+                    android:layout_marginEnd="@dimen/fab_margin_small"
+                    android:layout_marginStart="@dimen/fab_margin_small"
+                    android:layout_marginTop="@dimen/fab_margin_small"
+                    android:text="@string/restaurant_loc_prompt"
+                    android:textColor="@color/Ucsd_eat"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/location_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hours_info"
+                    android:layout_marginBottom="@dimen/fab_margin_small"
+                    android:layout_marginEnd="@dimen/fab_margin_small"
+                    android:layout_marginStart="@dimen/fab_margin_small"
+                    android:layout_marginTop="@dimen/fab_margin_small"
+                    android:layout_toRightOf="@id/location_prompt"
+                    android:text="TextView"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/textbox_shape_no_left_and_right"
+                android:orientation="horizontal"
+                app:layout_constrainedHeight="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/fab_margin_minimal"
+                    android:layout_marginBottom="@dimen/fab_margin_minimal" >
+
+                    <Button
+                        android:id="@+id/menu_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/menu_image"
+                        android:layout_alignBottom="@id/menu_text"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/menu_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_list_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/menu_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/menu_image"
+                        android:gravity="center"
+                        android:text="@string/view_menu"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/fab_margin_minimal"
+                    android:layout_marginBottom="@dimen/fab_margin_minimal" >
+
+                    <Button
+                        android:id="@+id/upload_image_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/upload_image_image"
+                        android:layout_alignBottom="@id/upload_image_text"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/upload_image_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_add_a_photo_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/upload_image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/upload_image_image"
+                        android:gravity="center"
+                        android:text="@string/upload_restaurant_photo"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/fab_margin_minimal"
+                    android:layout_marginBottom="@dimen/fab_margin_minimal" >
+
+                    <Button
+                        android:id="@+id/write_review_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/write_review_image"
+                        android:layout_alignBottom="@id/write_review_text"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/write_review_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_rate_review_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/write_review_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/write_review_image"
+                        android:gravity="center"
+                        android:text="@string/write_review"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/fab_margin_minimal"
+                    android:layout_marginBottom="@dimen/fab_margin_minimal" >
+
+                    <Button
+                        android:id="@+id/write_post_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/write_post_image"
+                        android:layout_alignBottom="@id/write_post_text"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/write_post_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_mode_edit_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/write_post_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/write_post_image"
+                        android:gravity="center"
+                        android:text="@string/add_post"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/active_post_button_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/fab_margin"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:background="@drawable/textbox_shape_compact">
+
+                    <Button
+                        android:id="@+id/active_post_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#ffffff"
+                        android:minHeight="0dp"
+                        android:text="@string/active_posts"
+                        android:textSize="@dimen/small_text_size" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/active_review_button_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:layout_toRightOf="@id/active_post_button_frame"
+                    android:background="@drawable/textbox_shape_compact_gray">
+
+                    <Button
+                        android:id="@+id/active_review_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/nearlyWhite"
+                        android:minHeight="0dp"
+                        android:text="@string/active_reviews"
+                        android:textSize="@dimen/small_text_size" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/active_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/fab_margin_small" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

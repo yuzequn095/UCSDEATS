@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/fab_margin"
+    android:background="@drawable/pc_home"
+    tools:context=".EatPostActivity">
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESTAURANT"
+        android:textColor="@color/ucsd_eat_text"
+        android:textSize="@dimen/BigText"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/post_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:gravity="left"
+        android:text="@string/time_posted"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_name" />
+
+    <TextView
+        android:id="@+id/post_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:gravity="left"
+        android:text="@string/countdown_time"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_start_time" />
+
+    <TextView
+        android:id="@+id/seats_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:gravity="left"
+        android:text="@string/seat_available"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_duration" />
+
+    <ImageView
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_margin_minimal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:background="@color/ucsd_eat_text"
+        android:src="@drawable/textbox_shape_no_left_and_right"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@id/seats_available" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin_minimal"
+        app:layout_constraintTop_toBottomOf="@id/divider_line"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constrainedHeight="true">
+
+        <LinearLayout
+            android:id="@+id/users_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constrainedHeight="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageButton
+                    android:id="@+id/join_leave_button"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignTop="@id/join_leave_image"
+                    android:layout_alignStart="@id/join_leave_text"
+                    android:layout_alignEnd="@id/join_leave_text"
+                    android:layout_alignBottom="@id/join_leave_text"
+                    android:onClick="joinPost" />
+
+                <ImageView
+                    android:id="@+id/join_leave_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/fab_margin_minimal"
+                    android:src="@drawable/ic_add_black_24dp" />
+
+                <TextView
+                    android:id="@+id/join_leave_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/join_leave_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/fab_margin_minimal"
+                    android:layout_marginLeft="@dimen/fab_margin_small"
+                    android:layout_marginRight="@dimen/fab_margin_small"
+                    android:gravity="center"
+                    android:text="JOIN!!!"
+                    android:textColor="@color/defaultTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

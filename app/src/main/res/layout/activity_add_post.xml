@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pc_home"
+    tools:context=".AddPostActivity">
+
+    <LinearLayout
+        android:id="@+id/timer_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/set_duration"
+            android:textColor="@color/ucsd_eat_text"
+            android:textSize="@dimen/default_text_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/fab_margin_small"
+            android:background="@drawable/textbox_shape"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            app:layout_constrainedHeight="true" >
+
+            <LinearLayout
+                android:id="@+id/hour_timer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin_small"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/hour_timer_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="changeValue"
+                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                <EditText
+                    android:id="@+id/hour_timer_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/textbox_shape"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/timer_num_size"
+                    android:digits="012"
+                    android:text="0" />
+
+                <ImageButton
+                    android:id="@+id/hour_timer_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="changeValue"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/colon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="@dimen/fab_margin_small"
+                android:textSize="@dimen/timer_num_size"
+                android:text=":" />
+
+            <LinearLayout
+                android:id="@+id/min_ten_timer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin_small"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/min_ten_timer_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="changeValue"
+                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                <EditText
+                    android:id="@+id/min_ten_timer_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/textbox_shape"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/timer_num_size"
+                    android:digits="012345"
+                    android:text="0" />
+
+                <ImageButton
+                    android:id="@+id/min_ten_timer_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="changeValue"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/min_one_timer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin_small"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/min_one_timer_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="changeValue"
+                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                <EditText
+                    android:id="@+id/min_one_timer_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/textbox_shape"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/timer_num_size"
+                    android:text="0" />
+
+                <ImageButton
+                    android:id="@+id/min_one_timer_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="changeValue"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seats_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintTop_toBottomOf="@id/timer_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/seats_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/num_seats"
+            android:textColor="@color/ucsd_eat_text"
+            android:textSize="@dimen/default_text_size" />
+
+        <TextView
+            android:id="@+id/seats_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/default_text_size"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seats_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:max="9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restaurant_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintTop_toBottomOf="@id/seats_layout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/restaruant_name_prompt"
+            android:textColor="@color/ucsd_eat_text"
+            android:textSize="@dimen/default_text_size" />
+
+        <Spinner
+            android:id="@+id/restaurant_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/textbox_shape_arrow"
+            android:entries="@array/restaurant_array"></Spinner>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Ucsd_eat"
+        android:onClick="actionSubmit"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_layout" />
+
+</android.support.constraint.ConstraintLayout>

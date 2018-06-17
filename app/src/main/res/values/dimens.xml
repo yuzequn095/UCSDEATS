@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin_small">8dp</dimen>
+    <dimen name="fab_margin_minimal">4dp</dimen>
+    <dimen name="title_bar_height">60dp</dimen>
+    <dimen name="restaurant_text_box_height">180dp</dimen>
+    <dimen name="restaurant_image_height">150dp</dimen>
+    <dimen name="post_text_box_height">200dp</dimen>
+    <dimen name="button_splits">64dp</dimen>
+    <dimen name="padding_2">19dp</dimen>
+
+    <dimen name="search_margin_start">36dp</dimen>
+    <dimen name="default_text_size">18sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="tiny_text_size">10sp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+    <dimen name="BigText">28sp</dimen>
+    <dimen name="restaurant_name_size">30sp</dimen>
+    <dimen name="header_pic_width_height">100dp</dimen>
+    <dimen name="timer_num_size">90sp</dimen>
+    <dimen name="Very_fat_margin">48dp</dimen>
+</resources>

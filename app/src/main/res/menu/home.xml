@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/random_restaurant"
+        android:orderInCategory="100"
+        android:title="@string/random_res"
+        android:icon="@drawable/ic_baseline_not_listed_location_24px"
+        app:showAsAction="always"/>
+</menu>
